@@ -19,20 +19,13 @@
   --m-5: 2.5rem;
   --m-6: 3rem;
 }
-@media screen and (max-width: 768px) {
-  :root {
-    --big-font-size: 5rem;
-    --medium-font-size: 2rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.8rem;
-  }
-}
 
 /* base */
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+  border: 3px solid red;
 }
 html {
   scroll-behavior: smooth;
@@ -152,18 +145,6 @@ article {
 }
 .nav__toggle {
   display: none;
-}
-@media screen and (max-width: 768px) {
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: 0;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--secondary-color);
-    transition: 0.3s;
-  }
 }
 
 /* banner */
@@ -491,7 +472,9 @@ footer h3 {
   font-weight: bold;
   color: var(--white-color);
 }
-footer p {
+footer p,
+footer a,
+footer ul li {
   color: var(--grey-color);
 }
 footer .bio {
@@ -503,6 +486,90 @@ footer .explore {
   margin-right: 10rem;
 }
 footer h3,
-footer p {
+footer p,
+footer ul li {
   font-size: var(--small-font-size);
+}
+footer a i {
+  font-size: var(--medium-font-size);
+}
+footer a:hover {
+  color: var(--secondary-color);
+}
+footer .medsos__icon {
+  margin-right: var(--m-1);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 5rem;
+    --medium-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+  }
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+  }
+  .nav__list {
+    display: block;
+  }
+  .nav__toggle {
+    display: block;
+  }
+  .section.about article {
+    display: block;
+  }
+  .section.skill {
+    background-color: var(--secondary-color);
+  }
+  .section.skill article {
+    display: block;
+  }
+  .section.skill article aside {
+    display: block;
+  }
+  .skill__title {
+    color: var(--white-color);
+    font-size: var(--normal-font-size);
+  }
+  .skill__item {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-medium);
+    padding: 0.5rem 1rem;
+    margin-bottom: var(--m-4);
+    border-radius: 0.5rem;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  }
+  .skill__names {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--m-1);
+  }
+  .skill__icon {
+    font-size: 2rem;
+    margin-right: var(--m-2);
+    color: var(--first-color);
+  }
+  .skill__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    height: 0.5rem;
+    border-radius: inherit;
+    z-index: 1;
+  }
 }
