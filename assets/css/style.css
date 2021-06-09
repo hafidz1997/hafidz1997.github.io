@@ -25,7 +25,6 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  border: 3px solid red;
 }
 html {
   scroll-behavior: smooth;
@@ -59,12 +58,6 @@ svg {
 }
 article {
   padding: 4rem;
-}
-.pb-0 {
-  padding-bottom: 0;
-}
-.pt-0 {
-  padding-top: 0;
 }
 .section {
   margin: 0;
@@ -279,9 +272,12 @@ a.scroll-down:hover {
 .section.skill article {
   display: flex;
 }
-.section.skill article aside {
+.section.skill article aside.web-view {
   display: flex;
   align-items: center;
+}
+.section.skill article aside.mobile-view {
+  display: none;
 }
 .skill__title {
   color: var(--white-color);
@@ -466,7 +462,7 @@ footer {
   padding: var(--m-6);
   display: flex;
   background-color: var(--primary-color);
-  height: 15rem;
+  height: 20rem;
 }
 footer h3 {
   font-weight: bold;
@@ -501,75 +497,117 @@ footer .medsos__icon {
 }
 
 @media screen and (max-width: 768px) {
+  /* general */
   :root {
-    --big-font-size: 5rem;
-    --medium-font-size: 2rem;
+    --big-font-size: 2.5rem;
+    --medium-font-size: 1.5rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.8rem;
   }
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: 0;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--secondary-color);
-    transition: 0.3s;
+  article {
+    padding: var(--m-3);
   }
+  .section {
+    margin: 0;
+    padding: 5rem 0;
+    position: relative;
+  }
+
+  /* header */
   .nav__list {
     display: block;
   }
   .nav__toggle {
     display: block;
   }
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--grey-color);
+    transition: 0.3s;
+  }
+  .show {
+    right: 0;
+  }
+  .nav__link.active,
+  .nav__link:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  /* about */
   .section.about article {
     display: block;
   }
-  .section.skill {
-    background-color: var(--secondary-color);
+  .about__bio {
+    margin-left: 0;
+    text-align: center;
   }
+
+  /* skill */
   .section.skill article {
     display: block;
   }
-  .section.skill article aside {
-    display: block;
+  .section.skill article aside.mobile-view {
+    display: flex;
+    align-items: center;
   }
-  .skill__title {
-    color: var(--white-color);
-    font-size: var(--normal-font-size);
+  .section.skill article aside.web-view {
+    display: none;
   }
   .skill__item {
+    width: 100%;
+    display: block;
+  }
+  .mobile-skill,
+  .web-skill {
+    padding: var(--m-1) var(--m-3);
+  }
+  .mobile-skill .skill__img {
     width: 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    font-weight: var(--font-medium);
-    padding: 0.5rem 1rem;
-    margin-bottom: var(--m-4);
-    border-radius: 0.5rem;
-    background-color: var(--white-color);
-    color: var(--primary-color);
-    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+    margin: 0 auto;
   }
-  .skill__names {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--m-1);
+
+  /* project */
+  .section.project {
+    padding-bottom: var(--m-2);
   }
-  .skill__icon {
-    font-size: 2rem;
-    margin-right: var(--m-2);
-    color: var(--first-color);
+
+  /* contact */
+  .contact__container {
+    display: block;
+    margin: var(--m-4);
   }
-  .skill__bar {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: var(--primary-color);
-    height: 0.5rem;
-    border-radius: inherit;
-    z-index: 1;
+  .contact__inputs {
+    display: block;
+  }
+  .contact__btn {
+    margin: auto;
+  }
+  textarea.contact__input,
+  .contact__input {
+    width: 100%;
+  }
+
+  /* footer */
+  footer {
+    padding: var(--m-3);
+    display: block;
+    height: 25rem;
+  }
+  footer > div {
+    margin-bottom: var(--m-3);
+  }
+  footer .bio {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  footer .explore {
+    margin-right: 10rem;
   }
 }
