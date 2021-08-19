@@ -1,5 +1,6 @@
 # hafidz1997.github.io
-course dicoding frontend webdasar
+**course dicoding frontend webdasar**
 
 open my portofolio:
-https://hafidz1997.github.io/
+<br>
+<a href="https://hafidz1997.github.io/" target="_blank">https://hafidz1997.github.io/</a>
