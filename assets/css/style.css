@@ -157,12 +157,12 @@ article {
   align-items: center;
 }
 h1 {
-  font-size: var(--big-font-size);
-  color: var(--secondary-color);
-}
-h2 {
   font-size: var(--medium-font-size);
   color: var(--white-color);
+}
+h2 {
+  font-size: var(--big-font-size);
+    color: var(--secondary-color);
 }
 p {
   font-size: var(--normal-font-size);
