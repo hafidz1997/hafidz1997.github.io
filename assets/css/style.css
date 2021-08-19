@@ -158,7 +158,7 @@ article {
 }
 h1 {
   font-size: var(--medium-font-size);
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 h2 {
   font-size: var(--big-font-size);
