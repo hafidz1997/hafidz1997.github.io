@@ -34,8 +34,7 @@ body {
   font-family: var(--base-font);
 }
 h1,
-h2,
-p {
+h2 {
   margin: 0;
 }
 ul {
@@ -162,7 +161,7 @@ h1 {
 }
 h2 {
   font-size: var(--big-font-size);
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 p {
   font-size: var(--normal-font-size);
@@ -410,20 +409,19 @@ a.scroll-down:hover {
 /* contact */
 .contact__container {
   margin: var(--m-6) 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .contact__container label {
   font-weight: bold;
   color: var(--secondary-color);
 }
 .contact__info {
-  max-width: 30rem;
+  /* max-width: 30rem; */
+  display: flex;
+  justify-content: space-between;
 }
 .contact__info p {
-  margin-top: var(--m-1);
-  margin-bottom: var(--m-5);
+  /* margin-top: var(--m-1);
+  margin-bottom: var(--m-5); */
   color: var(--primary-color);
 }
 .contact__inputs {
@@ -546,6 +544,11 @@ footer .medsos__icon {
   .about__bio {
     margin-left: 0;
     text-align: center;
+  }
+  .section.about article .about__bio p {
+    margin: 1rem 0 !important;
+    color: red;
+    font-size: 20rem;
   }
 
   /* skill */
