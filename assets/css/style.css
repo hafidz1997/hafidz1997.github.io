@@ -322,13 +322,19 @@ a.scroll-down:hover {
   width: 85%;
 }
 .skill__js {
-  width: 75%;
+  width: 85%;
 }
 .skill__bs {
   width: 80%;
 }
-.skill__laravel {
+.skill__react {
   width: 75%;
+}
+.skill__laravel {
+  width: 80%;
+}
+.skill__node {
+  width: 65%;
 }
 .skill__mysql {
   width: 90%;
