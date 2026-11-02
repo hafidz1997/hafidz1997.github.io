@@ -609,11 +609,6 @@ footer .medsos__icon {
     margin-left: 0;
     text-align: center;
   }
-  .section.about article .about__bio p {
-    margin: 1rem 0 !important;
-    color: red;
-    font-size: 20rem;
-  }
 
   /* skill */
   .section.skill article {
@@ -676,5 +671,637 @@ footer .medsos__icon {
   }
   footer .explore {
     margin-right: 10rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE IMPROVEMENTS
+   Desktop styling tetap menggunakan CSS lama
+========================================= */
+
+/* =========================================
+   TABLET: 769px - 1024px
+========================================= */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Header */
+  .nav {
+    padding: 0 1.5rem;
+  }
+
+  .nav__logo {
+    font-size: 1.4rem;
+  }
+
+  .nav__item {
+    margin-left: 1rem;
+  }
+
+  /* About */
+  .section.about article {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+
+  .section.about aside {
+    flex: 0 0 30%;
+  }
+
+  .about__img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .about__bio {
+    flex: 1;
+    min-width: 0;
+    margin-left: 0;
+  }
+
+  /* Skill */
+  .section.skill article {
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .section.skill article aside {
+    flex: 0 1 40%;
+    min-width: 0;
+  }
+
+  .section.skill article .skill__data {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .skill__img {
+    width: 100%;
+  }
+
+  .mobile-skill .skill__img {
+    width: 100%;
+  }
+
+  .skill__item {
+    width: 100%;
+  }
+
+  /* Project */
+  .project__img {
+    margin: 1.25rem;
+  }
+
+  /* Contact */
+  .contact__container {
+    margin: var(--m-6) 3rem;
+  }
+
+  .contact__info {
+    gap: 1.5rem;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  footer .bio {
+    flex: 1 1 16rem;
+    margin: 0;
+  }
+
+  footer .explore {
+    margin-right: 0;
+  }
+}
+
+/* =========================================
+   MOBILE & SMALL TABLET: MAX 768px
+========================================= */
+@media screen and (max-width: 768px) {
+  /* General */
+  :root {
+    --big-font-size: 2.5rem;
+    --medium-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  article {
+    padding: 1.5rem;
+  }
+
+  .section {
+    margin: 0;
+    padding: 5rem 0;
+    position: relative;
+  }
+
+  /* Responsive section decorations */
+  .section > svg {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+
+  /* -----------------------------------------
+     HEADER / NAVIGATION
+  ----------------------------------------- */
+
+  .nav {
+    padding: 0 1.25rem;
+  }
+
+  .nav__logo {
+    font-size: 1.35rem;
+  }
+
+  .nav__toggle {
+    display: block;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+
+    width: min(80%, 320px);
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+
+    padding: 2rem;
+    background-color: var(--grey-color);
+    transition: 0.3s;
+    overflow-y: auto;
+  }
+
+  .nav__menu.show {
+    right: 0;
+  }
+
+  .nav__list {
+    display: block;
+  }
+
+  .nav__item {
+    margin: 0 0 1.5rem;
+  }
+
+  .nav__link {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  .nav__link.active,
+  .nav__link:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  /* -----------------------------------------
+     BANNER
+  ----------------------------------------- */
+
+  .section.banner {
+    height: 100vh;
+    min-height: 550px;
+
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+
+    padding: 0 1rem;
+  }
+
+  .section.banner h3 {
+    font-size: 1.1rem;
+  }
+
+  .section.banner h2 {
+    font-size: var(--big-font-size);
+  }
+
+  .scroll-down p {
+    bottom: 7rem;
+    width: 100%;
+    font-size: var(--medium-font-size);
+  }
+
+  .scroll-animation {
+    bottom: 20px;
+  }
+
+  /* -----------------------------------------
+     ABOUT ME
+  ----------------------------------------- */
+
+  .section.about article {
+    display: block;
+    padding: 1.5rem;
+  }
+
+  .section.about aside {
+    text-align: center;
+  }
+
+  .section.about aside h3 {
+    width: 100%;
+  }
+
+  .about__img {
+    width: min(65vw, 240px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 2rem;
+  }
+
+  .about__bio {
+    margin-left: 0;
+    margin-top: 2rem;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .about__bio h3 {
+    font-size: var(--medium-font-size);
+  }
+
+  .about__bio p,
+  .section.about article .about__bio p {
+    margin: 1rem 0 !important;
+    color: var(--primary-color) !important;
+    font-size: var(--normal-font-size) !important;
+    line-height: 1.8;
+  }
+
+  .about__bio .project__link-name {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+
+  /* -----------------------------------------
+     SKILL
+  ----------------------------------------- */
+
+  .section.skill article {
+    display: block;
+    padding: 1rem 1.5rem;
+  }
+
+  .section.skill article aside.mobile-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section.skill article aside.web-view {
+    display: none;
+  }
+
+  .web-skill,
+  .mobile-skill {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .skill__data {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .skill__title {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .skill__img {
+    width: min(100%, 18rem);
+    margin: 0 auto;
+  }
+
+  .mobile-skill .skill__img {
+    width: min(100%, 12rem);
+    margin: 0 auto;
+  }
+
+  .skill__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill__names {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .skill__name {
+    font-size: 0.9rem;
+  }
+
+  .skill__icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .skill__percentage {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* -----------------------------------------
+     PROJECT
+  ----------------------------------------- */
+
+  .section.project {
+    padding-bottom: 5rem;
+  }
+
+  .project__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .project__img {
+    width: min(20rem, calc(100vw - 3rem));
+    margin: 1rem auto;
+    cursor: default;
+  }
+
+  .project__img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+  }
+
+  .project__label {
+    max-width: 100%;
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
+  }
+
+  /* View Demo tetap terlihat pada touchscreen */
+  .project__link {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 0.75rem;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .project__img:hover .project__link {
+    bottom: auto;
+  }
+
+  .project__link-name {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* -----------------------------------------
+     CONTACT
+  ----------------------------------------- */
+
+  .contact__container {
+    display: block;
+    margin: 2rem 1.5rem;
+  }
+
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact__info > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact__info p {
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+
+  .contact__inputs {
+    display: block;
+  }
+
+  .contact__input,
+  textarea.contact__input {
+    width: 100%;
+    margin: 0.75rem 0;
+  }
+
+  .contact__btn {
+    margin: 1rem auto;
+  }
+
+  /* -----------------------------------------
+     FOOTER
+  ----------------------------------------- */
+
+  footer {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: auto;
+  }
+
+  footer > div {
+    margin: 0;
+  }
+
+  footer .bio {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  footer .explore {
+    margin: 0;
+  }
+
+  footer .bio p {
+    line-height: 1.7;
+  }
+
+  footer .medsos__container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  footer .medsos__icon {
+    margin-right: 0;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE: MAX 480px
+========================================= */
+@media screen and (max-width: 480px) {
+  :root {
+    --big-font-size: 2rem;
+    --medium-font-size: 1.25rem;
+    --normal-font-size: 0.95rem;
+    --small-font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .section-title::after {
+    top: 2.5rem;
+    width: 4rem;
+    height: 0.25rem;
+  }
+
+  /* Header */
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .nav__logo {
+    font-size: 1.1rem;
+  }
+
+  .nav__toggle {
+    font-size: 1.3rem;
+  }
+
+  .nav__menu {
+    width: min(85%, 300px);
+    padding: 1.5rem;
+  }
+
+  /* Banner */
+  .section.banner {
+    min-height: 500px;
+    padding: 0 1rem;
+  }
+
+  .section.banner h3 {
+    font-size: 1rem;
+  }
+
+  .section.banner h2 {
+    font-size: 2rem;
+  }
+
+  .scroll-down p {
+    bottom: 7rem;
+    font-size: 1.1rem;
+  }
+
+  /* About */
+  .section.about article {
+    padding: 1.25rem;
+  }
+
+  .about__img {
+    width: min(60vw, 210px);
+  }
+
+  .section.about aside h1 {
+    font-size: 1.25rem;
+  }
+
+  .about__bio {
+    margin-top: 1.5rem;
+  }
+
+  .about__bio p,
+  .section.about article .about__bio p {
+    font-size: 0.9rem !important;
+    line-height: 1.8;
+  }
+
+  /* Skill */
+  .web-skill,
+  .mobile-skill {
+    padding: 0.5rem 1rem;
+  }
+
+  .section.skill article {
+    padding: 0.75rem 1rem;
+  }
+
+  .skill__item {
+    padding: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill__name {
+    font-size: 0.85rem;
+  }
+
+  .skill__percentage {
+    font-size: 0.8rem;
+  }
+
+  /* Project */
+  .project__img {
+    width: calc(100vw - 2.5rem);
+  }
+
+  .project__label {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  /* Contact */
+  .contact__container {
+    margin: 2rem 1.25rem;
+  }
+
+  .contact__info label {
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 1.25rem;
+    gap: 1.25rem;
+  }
+
+  footer h3 {
+    font-size: 0.85rem;
+  }
+
+  footer p,
+  footer a,
+  footer ul li {
+    font-size: 0.8rem;
   }
 }
